@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Aca vamos a poner todo lo que va ser comun en nuestras vistas 
+seria el common, todas las vistas van a necesitar boostrap
+todas las vistas van a necesitar llamar a fuentes , navegacion footer -->
+<head>
+
+	<!-- Required meta tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" type="image/png" href="https://png.icons8.com/jsfiddle/color/24"/>
+        <!-- UX/SEO meta tags -->
+        <meta name="author" content="Federico Osella">
+        <meta http-equiv="cache-control" content="public">
+        <meta http-equiv="content-language" content="en-us">
+        <meta name="copyright" content="&copy; Federico Osella">
+        <meta name="description" content="A simple demo todo application designed and built using AngularJS and Bootstrap 4 beta">
+        <meta name="keywords" content="angularjs, bootstrap4, todo, demo application">
+        <meta name="theme-color" content="#212121">
+        <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="archive">
+        
+        <title>Top New Game</title>
+
+  <meta charset="UTF-8">
+  {{!-- Comentario handlers bars--}}
+  {{!-- GOOGLE FONTS --}}
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  {{!-- BOOTSTRAP 4 getboostrap.com--}}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  {{!-- FONT AWESOME 5 fontawesome.com Biblioteca de iconos lo de abajo es una cdn --}}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  {{!-- STYLES Aca agrego mis estilos --}}
+  <link rel="stylesheet" href="/css/styles.css">
+        
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	</head>
+
+
+</head>
+
+<body>
+  <!-- Estos son comandos de hbs
+  Quiere decir que el codigo de navigation, message y body
+  Solovan a cambiar ahi pero lo demas arriva y abajo no cambia-->
+  
+  {{!--Por ejemplo el navigation lo pogo dentro de partials para tenerlo deparado y ordenado
+  ese tipo de navegacion lo saco de getboostrap.com/docs/4.1/components/navbar/
+  creo un archibo navigation.hbs y pego el bloque nav--}}
+
+  {{!--Para importar los partial acordarce de poner el simbolo ">" MAYOR--}}
+  {{!--Esto pasa porque en el archivo index.js ya le indicamos donde esta la 
+  carpeta partials :) --}}
+  {{>navigation}}
+  {{>message}} 
+  {{{ body }}}
+
+  {{!-- SCRIPTS --}}
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+</html>

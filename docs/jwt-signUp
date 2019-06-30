@@ -1,0 +1,8 @@
+We're gonna use JWT to make secure the API Rest
+This libray help us to generate a code with info to comunicate server with clients.
+
+First add library
+
+We have to use --save becouse we need to add this dependenci on the package.json
+
+npm i --save jwt-simple

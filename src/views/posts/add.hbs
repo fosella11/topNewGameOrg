@@ -1,0 +1,85 @@
+{{!<-- Agregamos un container con un padding de 4 "p-4" --}}
+<div class="container p-4">
+    {{!<-- luego colocamos una fila --}}
+    <div class="row">
+        {{!<-- La fila tendra adentro una columna de 4 --}}
+        {{!--mx-auto es para que la card este centrada en la fila--}}
+        <div class="col-md-4 mx-auto">
+            {{!<-- Entonces dentro de la fila q tiene una columna de 4 vamos a colocar
+            nuestro formulario
+            Que va estar dentro de una Tarjeta card 
+            Podemos tener card body card heder ... Pero lo vamos a colocar dentro del 
+            cardBody--}}
+            <div class="card">
+                {{!--Lo colocamos dentro del cardBody--}}
+                <div class="card-body">
+                        {{!!--Ahi adentro, De la card... Creamos el form
+                        Tenemos que decirle a donde va enviar los datos cuando le de click
+                        en el boton enviar submit PEROOO debemos crear otra ruta del 
+                        servidor (En el js posts creamos un nuevo router.post('/add')) 
+                        Ya tenemos el get pero este como sale de un form va como post 
+                        a la misma ruta ---- Para manejar esta ruta nueva vamos a usar un req y res
+                        --}}
+                        {{!--Entonces luego de agregar el router q lo va manejar
+                        Ponemos q va hacer un action en posts/add con el metodo POST
+                        El defecto es GET--}}
+                    <form action="/posts/add" method="POST">
+                        
+                        {{!--Boostrap
+                        Como ingresamos los datos
+                        Primero creo un campo input con class form-control que eso es un estilo de boostrap
+                        --}}
+                        {{!--NAME  name="url_android"eso es importante, con esta variable le decimos como va recibir el dato--}}
+                        {{!--Con el placeholder indicamos q es lo que tiene q poner--}}
+                        <div class="form-group">
+                            <input type="url" name="url_android" class="form-control" placeholder="URL Android" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="url" name="url_ios" class="form-control" placeholder="URL IOS">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="tittle_w1" rows="2" class="form-control" placeholder="Description Android 1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="desciption_w1" rows="2" class="form-control" placeholder="Description IOS 2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="tittle_w2" rows="2" class="form-control" placeholder="Description Android 1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="desciption_w2" rows="2" class="form-control" placeholder="Description IOS 2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="tittle_w3" rows="2" class="form-control" placeholder="Description Android 1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="desciption_w3" rows="2" class="form-control" placeholder="Description IOS 2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="tittle_w4" rows="2" class="form-control" placeholder="Description Android 1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="desciption_w4" rows="2" class="form-control" placeholder="Description IOS 2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="tittle_w5" rows="2" class="form-control" placeholder="Description Android 1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="desciption_w5" rows="2" class="form-control" placeholder="Description IOS 2"></textarea>
+                        </div>
+
+                        {{!-- Agrgamos un from grup para que se separe
+                        luego la clase btn q sea verde por eso btn-success btn-block para que
+                        ocupe todo el ancho Y SE VA LLAMAR SAVE--}}
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
